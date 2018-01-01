@@ -162,7 +162,7 @@ pub mod named {
 			}
 		}
 
-		d.deserialize_string(NameVisitor(PhantomData))
+		d.deserialize_any(NameVisitor(PhantomData))
 	}
 }
 macro_rules! serial_names {
@@ -230,7 +230,7 @@ pub mod numeric {
 			}
 		}
 
-		d.deserialize_string(NumVisitor(PhantomData))
+		d.deserialize_any(NumVisitor(PhantomData))
 	}
 }
 macro_rules! serial_numbers {
